@@ -36,9 +36,6 @@ double string_to_double(char* string){
 }
 
 int main (int argc, char** argv){
-    double sum_total_wait_and_serve = 0;
-    int total_num_rquests = 0;
-
 
     random_device rd;
     mt19937 gen(rd());
@@ -149,8 +146,6 @@ int main (int argc, char** argv){
 
     printf("%d %d %.4f %.4f %.4f\n", requests_serviced, requests_thrown, finish_time, avg_waiting_time,
            avg_service_time);
-    sum_total_wait_and_serve += avg_service_time + avg_waiting_time;
-    total_num_rquests += requests_serviced;
 
 
 }
